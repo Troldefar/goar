@@ -12,6 +12,5 @@ func main() {
 
 	port := ":8080"
 
-	fmt.Println("we ok at port", port)
-	log.Fatal(http.ListenAndServe(port, nil))
+	http.ListenAndServe(port, nil)
 }
