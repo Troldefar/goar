@@ -12,12 +12,12 @@ func TestHomeHandler(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	reponseRecorder := httptest.NewRecorder()
+	responseRecorder := httptest.NewRecorder()
 
 	handler := http.HandlerFunc(HomeHandler)
-	handle.ServerHTTP(responseRecorder, req)
+	handler.ServerHTTP(responseRecorder, req)
 
-	if status := rr.Code; status != http.StatusOK {
+	if status := responseRecorder.Code; status != http.StatusOK {
 		t.Errorf("Expected status 200, got %d", status)
 	}
 
