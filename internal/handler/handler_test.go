@@ -23,6 +23,6 @@ func TestHomeHandler(t *testing.T) {
 
 	expected := "Hello worldies"
 	if responseRecorder.Body.String() != expected {
-		t.Errorf("Expected %s, got %s, expected, responseRecorder.Body.String())
+		t.Errorf("Expected %s, got %s", expected, responseRecorder.Body.String())
 	}
 }
