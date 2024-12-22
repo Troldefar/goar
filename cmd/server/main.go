@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-	"log"
 	"net/http"
 	"github.com/Troldefar/goar/internal/handler"
 )
