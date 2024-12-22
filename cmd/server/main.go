@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"goar/internal/handler"
+	"github.com/goar/internal/handler"
 )
 
 func main() {
