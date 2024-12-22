@@ -15,7 +15,7 @@ func TestHomeHandler(t *testing.T) {
 	responseRecorder := httptest.NewRecorder()
 
 	handler := http.HandlerFunc(HomeHandler)
-	handler.ServerHTTP(responseRecorder, req)
+	handler.ServeHTTP(responseRecorder, req)
 
 	if status := responseRecorder.Code; status != http.StatusOK {
 		t.Errorf("Expected status 200, got %d", status)
