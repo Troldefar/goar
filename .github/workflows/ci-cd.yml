@@ -36,7 +36,7 @@ jobs:
       run: go test ./internal/handler -v
 
     - name: Build the go app
-      run: go build -o app /cmd/server
+      run: go build -o app ./cmd/server
 
   deploy:
     needs: build
