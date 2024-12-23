@@ -17,7 +17,7 @@ func main() {
 
   dat, err := os.ReadFile("test.txt")
 
-  checkErr(err)
+  functions.checkErr(err)
 
   fmt.Print(string(dat))
 }
