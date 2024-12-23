@@ -3,6 +3,9 @@ package main
 import (
 	"net/http"
 	"github.com/Troldefar/goar/internal/handler"
+  "github.com/Troldefar/goar/functions"
+  "fmt"
+  "os"
 )
 
 func main() {
@@ -11,4 +14,10 @@ func main() {
 	port := ":8080"
 
 	http.ListenAndServe(port, nil)
+
+  dat, err := os.ReadFile("test.txt")
+
+  checkErr(err)
+
+  fmt.Print(string(dat))
 }
